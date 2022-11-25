@@ -45,7 +45,7 @@
 
     <copy file="${archive}/asm-debug-all-custom.pom" toFile="${out.dist.lib}/all/${ant.project.name}-custom-${product.artifact}.pom"/>
     <replace file="${out.dist.lib}/all/${ant.project.name}-custom-${product.artifact}.pom" token="@product.name@" value="${ant.project.name}"/>
-    <replace file="${out.dist.lib}/all/${ant.project.name}-custom-${product.artifact}.pom" token="@product.artifact@" value="${product.artifact}-custom-"/>
+    <replace file="${out.dist.lib}/all/${ant.project.name}-custom-${product.artifact}.pom" token="@product.artifact@" value="${product.version}"/>
 
     <echo file="${out.dist.lib}/all/README.txt">It is highly recommended to use only the necessary ASM jars for your
 application instead of using the asm-all jar, unless you really need
