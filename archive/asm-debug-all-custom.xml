@@ -40,12 +40,12 @@
       eclipse="true"
       failok="false"
       exceptions="true"
-      files="archive/asm-debug-all.bnd"
-      output="${out.dist.lib}/all/${ant.project.name}-${product.artifact}.jar"/>
+      files="archive/asm-debug-all-custom.bnd"
+      output="${out.dist.lib}/all/${ant.project.name}-custom-${product.artifact}.jar"/>
 
-    <copy file="${archive}/asm-debug-all.pom" toFile="${out.dist.lib}/all/${ant.project.name}-${product.artifact}.pom"/>
-    <replace file="${out.dist.lib}/all/${ant.project.name}-${product.artifact}.pom" token="@product.name@" value="${ant.project.name}"/>
-    <replace file="${out.dist.lib}/all/${ant.project.name}-${product.artifact}.pom" token="@product.artifact@" value="${product.artifact}"/>
+    <copy file="${archive}/asm-debug-all-custom.pom" toFile="${out.dist.lib}/all/${ant.project.name}-custom-${product.artifact}.pom"/>
+    <replace file="${out.dist.lib}/all/${ant.project.name}-custom-${product.artifact}.pom" token="@product.name@" value="${ant.project.name}"/>
+    <replace file="${out.dist.lib}/all/${ant.project.name}-custom-${product.artifact}.pom" token="@product.artifact@" value="${product.artifact}-custom-"/>
 
     <echo file="${out.dist.lib}/all/README.txt">It is highly recommended to use only the necessary ASM jars for your
 application instead of using the asm-all jar, unless you really need
@@ -54,8 +54,8 @@ all ASM packages.</echo>
 
   <target name="build-snapshot" if="product.snapshot">
     <mkdir dir="${out.dist.lib}/all"/>
-    <copy file="${out.dist.lib}/all/${ant.project.name}-${product.artifact}.jar" toFile="${out.dist.lib}/${ant.project.name}-SNAPSHOT.jar"/>
-    <copy file="${out.dist.lib}/all/${ant.project.name}-${product.artifact}.pom" toFile="${out.dist.lib}/${ant.project.name}-SNAPSHOT.pom"/>
+    <copy file="${out.dist.lib}/all/${ant.project.name}-custom-${product.artifact}.jar" toFile="${out.dist.lib}/${ant.project.name}-SNAPSHOT.jar"/>
+    <copy file="${out.dist.lib}/all/${ant.project.name}-custom-${product.artifact}.pom" toFile="${out.dist.lib}/${ant.project.name}-SNAPSHOT.pom"/>
     <echo file="${out.dist.lib}/all/${ant.project.name}-snapshot-version" message="${product.build.time}"/>
   </target>
 

@@ -322,7 +322,7 @@
 		<ant antfile="${archive}/asm-all.xml" />
 		<ant antfile="${archive}/asm-analysis.xml" />
 		<ant antfile="${archive}/asm-commons.xml" />
-		<ant antfile="${archive}/asm-debug-all.xml" />
+		<ant antfile="${archive}/asm-debug-all-custom.xml" />
 		<ant antfile="${archive}/asm-parent.xml" />
 		<ant antfile="${archive}/asm-tree.xml" />
 		<ant antfile="${archive}/asm-util.xml" />
@@ -700,8 +700,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 			<arg value="org.apache.maven.plugins:maven-gpg-plugin:1.4:sign-and-deploy-file" />
 			<arg value="-Durl=${maven-staging-repository-url}" />
 			<arg value="-DrepositoryId=${maven-staging-repository-id}" />
-			<arg value="-DpomFile=${out.dist.lib}/all/asm-debug-all-${product.artifact}.pom" />
-			<arg value="-Dfile=${out.dist.lib}/all/asm-debug-all-${product.artifact}.jar" />
+			<arg value="-DpomFile=${out.dist.lib}/all/asm-debug-all-custom-${product.artifact}.pom" />
+			<arg value="-Dfile=${out.dist.lib}/all/asm-debug-all-custom-${product.artifact}.jar" />
 			<arg value="-Djavadoc=${out.zip}/${product.name}-${product.version}-javadoc.jar" />
 			<arg value="-Dsources=${out.zip}/${product.name}-${product.version}-sources.jar" />
 			<arg value="-Pow2-release" />

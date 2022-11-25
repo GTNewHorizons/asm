@@ -39,7 +39,7 @@
 
   <name>ASM Debug All</name>
   <groupId>org.ow2.asm</groupId>
-  <artifactId>asm-debug-all</artifactId>
+  <artifactId>asm-debug-all-custom</artifactId>
   <packaging>jar</packaging>
   
 </project>
